@@ -3,26 +3,30 @@ Caught Zero. Otherwise print OK.
 Input: single integer. 
 Output: Caught Zero or OK 
 Example: 0 → Caught Zero*/
-#include<iostream>
+#include <iostream>
+#include <string>
 using namespace std;
-void checkZero(int x){
-    if(x == 0){
+
+void checkZero(int x) {
+    if (x == 0) {
         throw string("Zero");
     }
-    else{
-        cout <<"OK"<<endl;
+    else {
+        cout <<"OK"<< endl;
     }
 }
-int main(){
-    int n;
-    string s;
-    try{
-        cout <<"Enter an integer :";
-        cin >>n;
-        checkZero(n);
+
+int main() {
+    int x;
+cout <<"Enter x:";
+    cin >> x;
+
+    try {
+        checkZero(x);
     }
-    catch(string &s){
-        cout <<"Caught "<<s<<endl;
+    catch (string& msg){
+        cout<< "Caught "<< msg << endl;
     }
 
+   
 }
