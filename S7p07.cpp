@@ -8,7 +8,7 @@ Example: 0 → Caught Zero*/
 using namespace std;
 
 void checkZero(int x) {
-    if (x == 0) {
+    if (x==0) {
         throw string("Zero");
     }
     else {
